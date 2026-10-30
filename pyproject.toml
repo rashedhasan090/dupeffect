@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dupeffect"
+version = "0.1.0"
+description = "Find duplicated side effects (double charges, double emails, rotated idempotency keys) in AI agent tool-call traces"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Md Rashedul Hasan"}]
+requires-python = ">=3.9"
+
+[project.scripts]
+dupeffect = "dupeffect.cli:main"
+
+[tool.setuptools]
+packages = ["dupeffect"]

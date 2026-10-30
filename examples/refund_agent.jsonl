@@ -1,0 +1,11 @@
+{"id":"c1","ts":0,"agent":"support","tool":"stripe.create_refund","args":{"charge":"ch_9","amount":4200},"status":"timeout"}
+{"id":"c2","ts":31,"agent":"support","tool":"stripe.create_refund","args":{"charge":"ch_9","amount":4200},"status":"ok"}
+{"id":"c3","ts":40,"agent":"support","tool":"gmail.send_email","args":{"to":"ana@example.com","subject":"Refund issued","body":"Your refund is on its way.","sent_at":"10:01"},"status":"ok"}
+{"id":"c4","ts":95,"agent":"followup","tool":"gmail.send_email","args":{"to":"ana@example.com","subject":"Refund issued","body":"Your refund is  on its way.","sent_at":"10:02"},"status":"ok"}
+{"id":"c5","ts":120,"agent":"billing","tool":"payments.charge","args":{"customer":"cus_1","amount":900,"idempotency_key":"k-1"},"status":"504"}
+{"id":"c6","ts":150,"agent":"billing","tool":"payments.charge","args":{"customer":"cus_1","amount":900,"idempotency_key":"k-2"},"status":"ok"}
+{"id":"c7","ts":200,"agent":"ops","tool":"deploy_service","args":{"service":"api","version":"1.4.2"},"status":"timeout"}
+{"id":"c8","ts":210,"agent":"ops","tool":"get_deploy_status","args":{"service":"api"},"status":"ok"}
+{"id":"c9","ts":220,"agent":"ops","tool":"deploy_service","args":{"service":"api","version":"1.4.2"},"status":"ok"}
+{"id":"c10","ts":300,"agent":"billing","tool":"payments.charge","args":{"customer":"cus_2","amount":500,"idempotency_key":"k-3"},"status":"ok"}
+{"id":"c11","ts":310,"agent":"billing","tool":"payments.charge","args":{"customer":"cus_2","amount":5000,"idempotency_key":"k-3"},"status":"ok"}
